@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import './styles.css'
-import LoginPage from '../LoginPage'
+import LoginPage from '../LoginPage';
+import Dashboard from '../Dashboard';
 
 
 import { MuiThemeProvider, createMuiTheme } from '@material-ui/core/styles'
@@ -27,8 +28,7 @@ export default function App() {
 			<Router>
 				<Switch>
 					<Route exact path="/" component={LoginPage} />
-				
-					
+					<Route exact path="/dashboard" component={Dashboard} />
 				</Switch>
 			</Router>
 		</MuiThemeProvider>

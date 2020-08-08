@@ -5,9 +5,11 @@ import './LoginPage/loginPageStyle.css'
 
 
 function Register() {
-	const [name, setName] = useState('')
+    const [firstname, setFirstname] = useState('')
+    const [lastname, setLastname] = useState('')
 	const [email, setEmail] = useState('')
-	const [password, setPassword] = useState('')
+    const [password, setPassword] = useState('')
+    
 	    return(<div className="contentwrapper">
                 <div className="content">
                     <div className="leftbod">
@@ -53,18 +55,18 @@ function Register() {
         <div className="signup bolder">Sign Up</div>
         <div className="free bolder">It's free and always will be</div>
         
-        <div className="formbox">
-        <input type="text" className="inputbody in1" placeholder="First name" value={name} onChange={e => setName(e.target.value)}/>
-        <input type="text" className="inputbody in1 fr" placeholder="Last name" value={name} onChange={e => setName(e.target.value)}/>
+        <div className="formbox" onSubmit={e => e.preventDefault() && false }>
+        <input type="text" className="inputbody in1" placeholder="First name" value={firstname} onChange={e => setFirstname(e.target.value)}/>
+        <input type="text" className="inputbody in1 fr" placeholder="Last name" value={lastname} onChange={e => setLastname(e.target.value)}/>
         </div>
         <div className="formbox">
-        <input type="text" class="inputbody in2" placeholder="Email or mobile number" value={email} onChange={e => setEmail(e.target.value)}/>
+        <input type="text" className="inputbody in2" placeholder="Email or mobile number" autoComplete="off" autoFocus value={email} onChange={e => setEmail(e.target.value)}/>
         </div>
         <div className="formbox">
-        <input type="text" class="inputbody in2" placeholder="Re-enter email or mobile number" value={email} onChange={e => setEmail(e.target.value)}/>
+        <input type="text" className="inputbody in2" placeholder="Re-enter email or mobile number" autoComplete="off" autoFocus value={email} onChange={e => setEmail(e.target.value)}/>
         </div>
         <div className="formbox">
-        <input type="text" class="inputbody in2" placeholder="New password" value={password} onChange={e => setPassword(e.target.value)}/>
+        <input type="text" className="inputbody in2" placeholder="New password" value={password} onChange={e => setPassword(e.target.value)}/>
         </div>
         
         
@@ -72,14 +74,14 @@ function Register() {
               <div className="agree">
                 By clicking Sign Up, you agree to our 
                 <div className="link">Terms</div> and that you have read our 
-                <div class="link">Data Use Policy</div>, including our <div class="link">Cookie Use</div>.
+                <div className="link">Data Use Policy</div>, including our <div class="link">Cookie Use</div>.
               </div>  
             </div>
-            <div class="formbox">
+            <div className="formbox">
               <button type="submit" className="signbut bolder" onClick={onRegister}>Sign Up</button>
             </div>
-          <div class="formbox">
-            <div class="create"><div class="link h">Create a Page</div> for a celebrity, band or business.</div>
+          <div className="formbox">
+            <div className="create"><div class="link h">Create a Page</div> for a celebrity, band or business.</div>
           </div>
       </div>
      </div>
@@ -90,7 +92,7 @@ function Register() {
     
     async function onRegister() {
 		try {
-			await firebase.register(name, email, password)
+            await firebase.register(firstname, lastname, email, password)
 		   } catch(error) {
 			alert(error.message)
 		}
