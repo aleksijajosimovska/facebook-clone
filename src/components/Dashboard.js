@@ -18,11 +18,7 @@ function Dashboard(props) {
 
 	
 	return (<div className={classes}>
-			<h1 className={classes}>
 			
-					Hello { firebase.getCurrentUsername() }
-                </h1>
-				<div className="button" onClick={logout}>Log Out</div>
 				<ProfilePage1 />
 				<ProfilePage2 />
 			</div>

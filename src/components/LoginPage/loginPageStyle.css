@@ -6,8 +6,9 @@ body {
   
   .navwrapper {
     width: 100%;
+    margin:0;
     height: 82px;
-    background-color: #3b5998;
+    background-color: hsl(221, 44%, 41%);
   }
   
   .navbar {

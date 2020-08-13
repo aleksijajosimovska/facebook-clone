@@ -43,8 +43,8 @@ function Register() {
           <img 
           src="https://fbcdn-dragon-a.akamaihd.net/hphotos-ak-xap1/t39.2365-6/851558_160351450817973_1678868765_n.png " alt="" className="iconwrap fb1"/>
           <div className="fb1">
-            <span class="rowtext">Find more</span>
-            <span class="rowtext2 fb1">of what you're looking for with graph search</span>
+            <span className="rowtext">Find more</span>
+            <span className="rowtext2 fb1">of what you're looking for with graph search</span>
         </div> 
         </div> 
        
@@ -60,16 +60,23 @@ function Register() {
         <input type="text" className="inputbody in1 fr" placeholder="Last name" value={lastname} onChange={e => setLastname(e.target.value)}/>
         </div>
         <div className="formbox">
-        <input type="text" className="inputbody in2" placeholder="Email or mobile number" autoComplete="off" autoFocus value={email} onChange={e => setEmail(e.target.value)}/>
+        <input type="text" className="inputbody in2" placeholder="Email or mobile number" autoComplete="off"  value={email} onChange={e => setEmail(e.target.value)}/>
         </div>
         <div className="formbox">
-        <input type="text" className="inputbody in2" placeholder="Re-enter email or mobile number" autoComplete="off" autoFocus value={email} onChange={e => setEmail(e.target.value)}/>
+        <input type="text" className="inputbody in2" placeholder="Re-enter email or mobile number" autoComplete="off"  value={email} onChange={e => setEmail(e.target.value)}/>
         </div>
         <div className="formbox">
         <input type="text" className="inputbody in2" placeholder="New password" value={password} onChange={e => setPassword(e.target.value)}/>
         </div>
         
-        
+        <div class="form-group">
+                                        <label for="sex_male" className="input-lg">
+                                            <input type="radio" name="sex" value="male" id="sex_male"/> Male
+                                        </label>
+                                        <label for="sex_female" className="input-lg">
+                                            <input type="radio" name="sex" value="female" id="sex_female"/> Female
+                                        </label>
+                                </div>
             <div className="formbox">
               <div className="agree">
                 By clicking Sign Up, you agree to our 

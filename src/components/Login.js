@@ -9,8 +9,7 @@ function SignIn(props) {
 	const [email, setEmail] = useState('')
 	const [password, setPassword] = useState('')
 
-	return (
-		<div className="navwrapper">
+	return (<div className="navwrapper">
                 <div className="navbar">
                         <table className="tablewrapper">
                                 <tr>
