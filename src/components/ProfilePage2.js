@@ -3,8 +3,7 @@ import './profpagestyle.css';
 import './profpagestyles.css'
 
 function ProfilePage2() {
-    return (
-        <div class="main">
+    return (<div class="main">
             <div class="container-fluid">
                 <div class="col-sm-3 left-sidebar">
                     <ul>
@@ -107,16 +106,7 @@ This is the post body. Lorem Ipsum Doler sit. Lorem Ipsum Doler sit. Lorem Ipsum
 This is the post body. Lorem Ipsum Doler sit. Lorem Ipsum Doler sit. Lorem Ipsum Doler sit. Lorem Ipsum Doler sit.
                             </div>
                         </div>
-                        <div class="row post-action">
-                            <ul class="post-action-menu">
-                                <li><a href="javascript:void(0);" class="text-mute" onclick="like(4);">Like</a></li>
-                                <li><a href="javascript:void(0);" class="text-mute" onclick="share(4);">Share</a></li>
-                                <li><a href="javascript:void(0);" class="text-mute" onclick="comment(4);">Comment</a></li>
-                                <li class="pull-right"><a href="#" class="text-mute"><span id="post_like_count_4">2142</span> Likes</a></li>
-                                <li class="pull-right"><a href="#" class="text-mute"><span id="post_comment_count_4">2172</span> Comments</a></li>
-                                <li class="pull-right"><a href="#" class="text-mute"><span id="post_share_count_4">200</span> Shares</a></li>
-                            </ul>
-                        </div>
+                        
                     </div>
                     <div class="post col-sm-12" id="post_5">
                         <div class="row post-heading">
@@ -137,9 +127,7 @@ This is the post body. Lorem Ipsum Doler sit. Lorem Ipsum Doler sit. Lorem Ipsum
                         </div>
                         <div class="row post-action">
                             <ul class="post-action-menu">
-                                <li><a href="javascript:void(0);" class="text-mute" onclick="like(5);">Like</a></li>
-                                <li><a href="javascript:void(0);" class="text-mute" onclick="share(5);">Share</a></li>
-                                <li><a href="javascript:void(0);" class="text-mute" onclick="comment(5);">Comment</a></li>
+                                
                                 <li class="pull-right"><a href="#" class="text-mute"><span id="post_like_count_5">2142</span> Likes</a></li>
                                 <li class="pull-right"><a href="#" class="text-mute"><span id="post_comment_count_5">2172</span> Comments</a></li>
                                 <li class="pull-right"><a href="#" class="text-mute"><span id="post_share_count_5">200</span> Shares</a></li>
